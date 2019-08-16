@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+.text-param{
+    line-height: 1.5; 
+    font-size: 1.3rem;
+}
+.link-footer, .link {
+    color: lightslategrey;
+    font-weight: bold;
+}
+.link-footer:hover, .link:hover {
+    color: black;
+}
+.link{
+    font-weight: 500
+}
+.link-footer{
+    font-size: 0.85rem;
+}
+#products-word{
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #bcac76;
+}
+#products-word:hover{
+    color: #9a884b;
+}
+.img-text{
+    color: gainsboro;
+    font-size: 4.5rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.fa-facebook-f, .fa-twitter{
+    color: black;
+}
+.fa-phone-alt{
+    opacity: 0.5;
+}
