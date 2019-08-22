@@ -1,23 +1,53 @@
 *{
     box-sizing: border-box;
 }
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
 .text-param{
     line-height: 1.5; 
     font-size: 1.3rem;
 }
-.link-footer, .link {
-    color: lightslategrey;
+/* Custom links */
+.link-footer, .link, .dropdown-item{
+    color: lightslategrey!important;
     font-weight: bold;
 }
-.link-footer:hover, .link:hover {
-    color: black;
+.link-footer:hover, .link:hover, .dropdown-item:hover, .dropdown-item:focus{
+    color: black!important;
+    background-color: #ffffff!important;
+
 }
 .link{
-    font-weight: 500
+    font-weight: 500;
 }
 .link-footer{
+    position: relative;
     font-size: 0.85rem;
+    transition: all ease-in-out 0.2s;
 }
+.link-footer:after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+    transition: 0.2s;
+    background-color: black;
+}
+.link-footer:hover{
+    text-decoration: none;
+}
+.link-footer:hover::after {
+    width: 100%;
+}
+/* Products word */
 #products-word{
     letter-spacing: 0.2rem;
     font-size: 0.8rem;
@@ -27,6 +57,7 @@
 #products-word:hover{
     color: #9a884b;
 }
+/* Text center 2 pictures */
 .img-text{
     color: gainsboro;
     font-size: 4.5rem;
@@ -37,9 +68,304 @@
     transform: translate(-50%, -50%);
 
 }
-.fa-facebook-f, .fa-twitter{
+/* Custom icons */
+.fa-facebook-f, .fa-twitter, .fa-user, .fa-heart, .fa-shopping-bag, .fa-bars, .fa-envelope, .fa-expand{
     color: black;
 }
 .fa-phone-alt{
     opacity: 0.5;
+}
+.fa-search{
+    color: black;
+    font-size: 1.5rem;
+}
+.fa-envelope{
+    font-size: 2.2rem;
+}
+/* Custom dropdown button with arrow behind */
+.dropdown-custom::after{
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-weight: 900;
+    content: "\f107";
+    margin-left: 0.3rem;
+    transition: all linear 0.25s;
+}
+.dropdown-custom[aria-expanded="true"]::after{
+    transform: rotate(-180deg);
+    
+}
+/* Custom fa phone */
+#fa-phone-custom::before{
+    content: '\f095';
+    font-family: FontAwesome;
+    margin: 0.5rem;
+}
+/* Custom dropdown-menu */
+.dropdown-menu{
+    border-radius: 0!important;
+    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.175);
+    font-weight: 300;
+    font-size: 0.9rem!important;
+}
+.topbar-link{
+    color: black;
+    font-size: 0.875rem;
+}
+.topbar-link:hover, .topbar-link:focus{
+    color: rgb(58, 51, 51);
+}
+.topbar-link:link{
+    text-decoration: none;
+}
+/* Custom background parallax */
+.bg-cover{
+    height: 100%;   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Custom subtitle parallax */
+.subtitle-custom{
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+}
+/* Custom large text in slide  */
+.h1-custom{
+    font-size: 6rem;
+    line-height: 1;
+}
+/* Custom button in slide */
+.btn-slide{
+    border-radius: 0!important;
+    font-weight: 700!important;
+    font-size: 0.875rem!important;
+    letter-spacing: 0.2rem;
+}
+/* Search box custom */
+.search-box-custom{
+    background-color: transparent;
+    color: gray;
+    font-weight: 500; 
+    border: 0;
+    font-size: 1rem;
+}
+.search-box-custom:focus{
+    outline: none;
+}
+/* Custom form underlined */
+.form-underlined{
+    border-bottom: 1px gray solid;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+.form-underlined:hover{
+    border-bottom-color: black;
+}
+/* Custom img hover */
+.img-hover{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.img-hover .bg-cover:before{
+    display: none;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: lightcyan;
+}
+.img-hover .bg-cover{
+    transition: all ease 0.2s;
+}
+.img-hover:hover .bg-cover{
+    transform: scale(1.05);
+}
+.img-hover:hover .bg-cover:before{
+    display: block;
+    opacity: 0.2;
+}
+/* Custom logo slider */
+.logos-swiper-container .swiper-wrapper .swiper-slide{
+    width: 10rem!important;
+}
+ .logo-swiper{
+    width: 6rem!important;
+}
+/* Deal of the week */
+#dealoftheweek{
+    letter-spacing: 0.2rem;
+    color: red;
+    font-weight: 800;
+    font-size: 1rem;
+    
+}
+/* Custom Product swap hover */
+.img-swap{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+.product-img-container{
+    position: relative;
+}
+.bar-hover{
+    opacity: 0;
+    transform: translateY(100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all ease-out 0.3s;
+}
+.product-detail{
+    position: relative;
+}
+.product-vote{
+    opacity: 0;
+    font-size: 0.7rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: all linear 0.2s;
+}
+.product:hover .bar-hover{
+    opacity: 1;
+    transform: translateY(-0%);
+}
+.product:hover .product-vote{
+    opacity: 1;
+    transform: translateY(-120%);
+}
+.product:hover .img-swap{
+    opacity: 1;
+    
+}
+/* User modal */
+.modal.fade .modal-dialog{
+    transform: 0.3s ease-out;
+}
+/* Custom nav-tab 
+*/
+.modal-content{
+    border-radius: 0!important;
+}
+.nav-custom{
+    color: gray;
+    font-weight: 750;
+}
+.nav-custom:hover{
+    color: black;
+}
+.nav-custom.active{
+    color: rgba(175, 165, 16, 0.829)!important;
+}
+.close-absolute{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem!important;
+    transition: all linear 0.1s;
+    z-index: 100;
+}
+.close-absolute:hover{
+    transform: rotate(90deg);
+}
+/* Custom forgot password */
+#forgotPassword{
+    color: #9a884b;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+#forgotPassword:hover{
+    text-decoration: #9a884b underline;
+}
+.modal-backdrop{
+    z-index: 1!important;
+}
+.form-label-custom{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.form-control{
+    border-radius: 0!important;
+}
+.form-check-label{
+    color: gray;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+/* Make a new check-box with check-mark, hide default checkbox
+ */
+ .check-box-custom{
+    opacity: 0;
+    z-index: -1;
+}
+.check-mark{
+    position: absolute;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid gray;
+}
+/* Hiden tick 
+ */
+.check-mark:after{
+    content: '';
+    display: none;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 0.3rem;
+    height: 0.5rem;
+    border: solid white;
+    border-width: 0 0.1rem 0.1rem 0;
+    transform: rotate(45deg);
+
+}
+/* If box was checked, background's check-mark will black, and tick will show
+ */
+.form-check-label input:checked ~ .check-mark{
+    background-color: black;
+}
+.form-check-label input:checked ~ .check-mark:after{
+    display: block;
+}
+/* HR with centered text */
+.hr-text{
+    height: 1.5rem;
+    text-align: center;
+    position: relative;
+
+}
+.hr-text::before{
+    content: '';
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 94%;
+}
+.hr-text::after{
+    content: attr(data-content);
+    position: relative;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    background-color: white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: gray;
 }
