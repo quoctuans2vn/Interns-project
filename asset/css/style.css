@@ -112,6 +112,14 @@ header{
     font-weight: 300;
     font-size: 0.9rem!important;
 }
+.dropdown-menu-custom{
+    position: relative!important;
+    border-radius: 0!important;
+    background-color: transparent!important;
+    border: 0!important;
+    box-shadow: none!important;
+
+}
 .topbar-link{
     color: black;
     font-size: 0.875rem;
@@ -257,8 +265,19 @@ header{
 }
 /* Custom nav-tab 
 */
+.nav-modal-custom .nav-item a{
+    color: gray!important;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.nav-modal-custom > .nav-item:hover > a, .nav-modal-custom > .nav-item .dropdown-custom:hover, .nav-modal-custom > .nav-item  > .dropdown-menu .dropdown-item:hover{
+    color: rgb(240, 208, 150)!important;
+}
 .modal-content{
     border-radius: 0!important;
+}
+.modal-header{
+    border: 0!important;
 }
 .nav-custom{
     color: gray;
@@ -270,6 +289,9 @@ header{
 .nav-custom.active{
     color: rgba(175, 165, 16, 0.829)!important;
 }
+.close{
+    position: relative;
+}
 .close-absolute{
     position: absolute;
     top: 1rem;
@@ -278,7 +300,11 @@ header{
     transition: all linear 0.1s;
     z-index: 100;
 }
-.close-absolute:hover{
+.close-rotate{
+    transition: all linear 0.1s;
+    z-index: 100;
+}
+.close-absolute:hover, .close-rotate:hover{
     transform: rotate(90deg);
 }
 /* Custom forgot password */
@@ -368,4 +394,26 @@ header{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     color: gray;
+}
+/* Modal right */
+.modal-right .modal-dialog{
+    margin: 0 0 0 auto;
+    height: 100vh;
+}
+/* Custom badge */
+.badge-product{
+    position: absolute;
+    top: 7%;
+    left: 10%;
+    border-radius: 0!important;
+    z-index: 100;
+    padding: 0.5rem!important;
+}
+.badge-icon{
+    position: absolute;
+    top: -35%;
+    right: -45%;
+    padding: 0.3rem 0.4rem !important;
+    font-size: 50% !important;
+    border-radius: 50% !important;
 }

@@ -21,6 +21,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- Animate on Scroll -->
+    <link href="./asset/css/aos.css" rel="stylesheet">
+    <script src="./asset/js/aos.js"></script>
     <!---->
     <script src="./asset/js/bootstrap.js"></script>
     <script src="./asset/js/demo.js"></script>
@@ -98,17 +101,45 @@
                         <a class="nav-link dropdown-custom" href="#" id="Home" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Home</a>
                         <div class="dropdown-menu" aria-labelledby="Home">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
+                            <a class="dropdown-item" href="#">Home v.1</a>
+                            <a class="dropdown-item" href="#">Home v.2</a>
                         </div>
                     </li>
                     <!-- Shop dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-custom" href="#" id="Shop" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Shop</a>
-                        <div class="dropdown-menu" aria-labelledby="Shop">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
+                        <div class="dropdown-menu py-0" style="border: 0!important;" aria-labelledby="Shop">
+                            <div class="container-fluid " style="height: 55vh; min-width: 700px;">
+                                <div class="row h-100">
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-6 py-5">
+                                                <h6 class="dropdown-header text-dark" style="font-weight: 700;">
+                                                    Shop pages
+                                                </h6>
+                                                <a href="" class="dropdown-item">Full width</a>
+                                                <a href="" class="dropdown-item">Full width with category menu</a>
+                                                <a href="" class="dropdown-item">Full width with big products</a>
+                                                <a href="" class="dropdown-item">Boxed</a>
+                                                <a href="" class="dropdown-item">Boxed & sidebar</a>
+                                                <a href="" class="dropdown-item">Subcategories</a>
+                                            </div>
+                                            <div class="col-6 py-5">
+                                                <h6 class="dropdown-header text-dark" style="font-weight: 700;">
+                                                    Product pages
+                                                </h6>
+                                                <a href="" class="dropdown-item">Product with sticky-info</a>
+                                                <a href="" class="dropdown-item">Product with background</a>
+                                                <a href="" class="dropdown-item">Product standard</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 bg-cover"
+                                        style="background-image: url(https://images.pexels.com/photos/794064/pexels-photo-794064.jpeg?cs=srgb&dl=beauty-casual-curly-794064.jpg&fm=jpg);">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <!-- Icons Menu dropdown -->
@@ -277,23 +308,33 @@
                         </div>
                     </li>
                     <li class="list-inline-item mr-3">
-                        <button type="button" class="close"><i class="far fa-heart"></i></button>
+
+                        <button type="button" class="close">
+                            <span class="badge badge-warning badge-icon">3</span>
+                            <i class="far fa-heart"></i>
+                        </button>
 
                     </li>
                     <li class="list-inline-item mr-3">
-                        <button type="button" class="close" id="modalRightBtn"><i
-                                class="fas fa-shopping-bag"></i></button>
+                        <button type="button" class="close" id="cartModalBtn">
+                            <span class="badge badge-warning badge-icon">5</span>
+                            <i class="fas fa-shopping-bag"></i></button>
+                    </li>
+                    <li class="list-inline-item mr-3">
+                        <button type="button" class="close" id="modalRightBtn"><i class="fas fa-bars"></i></button>
                         <!-- Modal Right -->
-                        <div class="modal" id="modalRight" role="dialog">
+                        <div class="modal modal-right" id="modalRight" role="dialog">
                             <div class="modal-dialog" role="document">
-                                <div class="modal-content container">
-                                    <button type="button" class="close close-absolute" data-dismiss="modal"
-                                        aria-label="Close">
-                                        <i class="fas fa-times"></i>
-                                    </button>
+                                <div class="modal-content h-100 container">
+                                    <div class="modal-header">
+                                        <button type="button" class="close close-rotate" style="font-size: 2.2rem;"
+                                            data-dismiss="modal" aria-label="Close">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
                                     <div class="modal-body">
-                                        <h3>Varkala</h3>
-                                        <ul class="nav flex-column">
+                                        <h3 class="mb-5" style="font-size: 1.2rem; font-weight: 800;">Varkala</h3>
+                                        <ul class="nav flex-column nav-modal-custom mb-5">
                                             <li class="nav-item">
                                                 <a class="nav-link active" href="#">Home</a>
                                             </li>
@@ -305,19 +346,39 @@
                                                     aria-disabled="true">Disabled</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link dropdown-custom" id="#dropDownLink" data-toggle="dropdown">Dropdown link</a>
-                                                <div class="dropdown-menu" aria-labelledby="dropDownLink">
-                                                    
+                                                <a class="nav-link dropdown-custom" id="#dropDownLink"
+                                                    data-toggle="dropdown">Dropdown link</a>
+                                                <div class="dropdown-menu dropdown-menu-custom"
+                                                    aria-labelledby="dropDownLink">
+                                                    <a href="#" class="dropdown-item">Action</a>
+                                                    <a href="#" class="dropdown-item">Another action</a>
+                                                    <a href="#" class="dropdown-item">Something else here</a>
                                                 </div>
                                             </li>
                                         </ul>
+                                        <ul class="list-inline d-flex align-items-center mb-4"
+                                            style="font-size: 1rem; font-weight: 500;">
+                                            <li class="list-inline-item ">
+                                                <a href="#">
+                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <p id="fa-phone-custom" style="margin: 0">020-800-456-747</p>
+                                            </li>
+                                        </ul>
+                                        <p class="text-muted" style="font-size: 0.875rem; font-weight: 600;">Samsa was a
+                                            travelling salesman - and above it there hung a picture that he had recently
+                                            cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="list-inline-item mr-3">
-                        <a href="#"><i class="fas fa-bars"></i></a>
                     </li>
                 </ul>
                 <!-- End 3 Icons -->
@@ -331,8 +392,7 @@
         <div class="swiper-container main-swiper-container" style="height: 95vh; width: 100%; min-height: 600px;">
             <div class="swiper-wrapper">
                 <!-- Slide 1-->
-                <div class="swiper-slide bg-cover"
-                    style="background-image: url(https://images.pexels.com/photos/1328545/pexels-photo-1328545.jpeg?cs=srgb&dl=background-beautiful-beauty-1328545.jpg&fm=jpg)">
+                <div class="swiper-slide bg-cover" style="background-image: url(Image/img-slide1.jpg)">
                     <div class="container-fluid px-5 h-100">
                         <div class="row h-100 justify-content-center align-items-center" data-swiper-parallax="-500">
                             <div class="col col-lg-5 offset-lg-5">
@@ -347,8 +407,7 @@
                     </div>
                 </div>
                 <!-- Slide 2-->
-                <div class="swiper-slide bg-cover"
-                    style="background-image: url(https://images.pexels.com/photos/1030895/pexels-photo-1030895.jpeg?cs=srgb&dl=adolescent-casual-contemporary-1030895.jpg&fm=jpg)">
+                <div class="swiper-slide bg-cover" style="background-image: url(Image/img-slide2.jpg)">
                     <!-- Each slide has parallax title -->
                     <div class="container-fluid px-5 h-100">
                         <div class="row h-100 justify-content-center align-items-center text-center"
@@ -362,8 +421,7 @@
                     </div>
                 </div>
                 <!-- Slide 3-->
-                <div class="swiper-slide bg-cover"
-                    style="background-image: url(https://images.pexels.com/photos/2314880/pexels-photo-2314880.jpeg?cs=srgb&dl=feet-footwear-shoes-2314880.jpg&fm=jpg)">
+                <div class="swiper-slide bg-cover" style="background-image: url(Image/img-slide3.jpg)">
                     <!-- Each slide has parallax title -->
                     <div class="container-fluid px-5 h-100">
                         <div class="row h-100 justify-content-start align-items-center" data-swiper-parallax="-500">
@@ -442,12 +500,9 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <span class="badge badge-info badge-product">Fresh</span>
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -480,12 +535,8 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -517,12 +568,8 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -554,12 +601,8 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -591,12 +634,9 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <span class="badge badge-warning badge-product">Sale</span>
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -628,12 +668,8 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -665,12 +701,9 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <span class="badge badge-dark badge-product">Sold out</span>
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -702,12 +735,8 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -739,12 +768,8 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -776,12 +801,8 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -813,12 +834,8 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -850,12 +867,8 @@
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <img class="img-fluid"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_1_1_1.b0b71e00.jpg"
-                                        alt="">
-                                    <img class="img-fluid img-swap"
-                                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0144074800_2_1_1.8b02df56.jpg"
-                                        alt="">
+                                    <img class="img-fluid" src="Image/product1-head.jpg" alt="">
+                                    <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
                                 <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
                                     <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
@@ -885,8 +898,7 @@
         </div>
         <!-- Deal of the week -->
         <div class="pt-4" style="height: 80vh; width: 100%; min-height: 500px;">
-            <div class="bg-cover"
-                style="background-image: url(https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?cs=srgb&dl=attractive-beautiful-cheerful-1536619.jpg&fm=jpg); z-index: 1000;">
+            <div class="bg-cover" style="background-image: url(Image/dealoftheweek.jpg); z-index: 1000;">
                 <div class="container-fluid h-100 py-5">
                     <div class="row h-100">
                         <div class="col-5">
@@ -1134,6 +1146,7 @@
         </div>
     </footer>
     <script src="./asset/js/swiper-slider.js"></script>
+    <script src="./asset/js/aos-product.js"></script>
 </body>
 
 </html>
