@@ -335,7 +335,7 @@
                 </ul>
 
                 <!-- Search Box -->
-                <form class="input-group form-underlined my-3 my-lg-0">
+                <form class="input-group form-underlined my-3 my-lg-0" style="width: auto;">
                     <input class="search-box-custom form-control p-2" type="text" placeholder="Search" />
                     <div class="input-group-append">
                         <a href="#">

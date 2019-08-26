@@ -157,7 +157,7 @@ header{
 }
 /* Search box custom */
 .search-box-custom{
-    
+    background-color: transparent !important;
     color: gray !important;
     font-weight: 500; 
     border: 0 !important;
