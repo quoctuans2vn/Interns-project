@@ -26,7 +26,6 @@
     <script src="./asset/js/aos.js"></script>
     <!---->
     <script src="./asset/js/bootstrap.js"></script>
-    <script src="./asset/js/demo.js"></script>
     <title>Document</title>
 </head>
 
@@ -37,7 +36,7 @@
         <div class="container-fluid py-3 px-5" style="font-size: 0.875rem">
             <div class="row align-items-center">
                 <!-- Icon fb, twitter -->
-                <div class="col-4">
+                <div class="d-none col-md-4 d-md-block">
                     <ul class="list-inline d-flex align-items-center mb-0">
                         <li class="list-inline-item ">
                             <a href="#">
@@ -55,11 +54,11 @@
                     </ul>
                 </div>
                 <!--Param Center top header -->
-                <div class="col-4 text-center">
+                <div class="col-12 col-sm-6 col-md-4 text-md-center">
                     <p style="margin: 0;">Free in-store delivery</p>
                 </div>
                 <!-- Dropdown button -->
-                <div class="col-4 d-flex justify-content-end">
+                <div class="d-none col-sm-6 col-md-4 d-sm-flex justify-content-end">
                     <!-- Dropdown 1 -->
                     <div class="dropdown border-right px-3">
                         <a href="#" class="dropdown-custom topbar-link" role="button" id="languageDropdown"
@@ -86,8 +85,29 @@
         </div>
         <!-- End Top header -->
         <!-- Bottom header -->
-        <nav class="navbar navbar-expand-sm navbar-light py-3 px-5" style="font-weight: 500;">
+        <nav class="navbar navbar-expand-sm navbar-light py-3 px-lg-5" id="navbar-changebg" style="font-weight: 500;">
             <a class="navbar-brand" href="#" style="font-size: 1rem;">Varkala</a>
+            <!-- 3 Icons small viewport -->
+            <ul class="d-lg-none list-inline ml-5 d-flex align-items-center mb-0"
+                style="font-size: 1.5rem; font-weight: 100;">
+                <li class="list-inline-item mr-3">
+                    <button type="button" class="close" id="userBtn"><i class="far fa-user"></i></button>
+                </li>
+                <li class="list-inline-item mr-3">
+
+                    <button type="button" class="close">
+                        <span class="badge badge-warning badge-icon">3</span>
+                        <i class="far fa-heart"></i>
+                    </button>
+
+                </li>
+                <li class="list-inline-item mr-3">
+                    <button type="button" class="close" id="cartModalBtn">
+                        <span class="badge badge-warning badge-icon">5</span>
+                        <i class="fas fa-shopping-bag"></i></button>
+                </li>
+            </ul>
+            <!-- End 3 Icons small viewport -->
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -147,165 +167,188 @@
                         <a class="nav-link dropdown-custom" href="#" id="IconsMenu" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Icons Menu</a>
                         <div class="dropdown-menu" aria-labelledby="IconsMenu">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
+                            <div class="container-fluid" style="height: 55vh; min-width: 700px;">
+                                <div class="row h-100">
+                                    <div class="col-md-2 text-center">
+                                        <a href="#">
+                                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                                                fill-rule="evenodd" clip-rule="evenodd">
+                                                <path
+                                                    d="M20.207 8.53l-2.193-1.405v15.884h-12.024v-15.854l-2.195 1.318-2.426-2.92 4.833-4.553h1.424c.51 1.754 2.018 3.5 4.377 3.5 2.392 0 3.876-1.699 4.381-3.5h1.42l4.826 4.586-2.423 2.944zm-4.858-7.53c-.466 1.322-1.604 2.5-3.346 2.5-1.73 0-2.868-1.178-3.342-2.5h6.688zm2.853-1h-12.396999999999998l-5.805 5.469 3.574 4.303 1.416-.85v15.087h14.024v-15.056l1.402.898 3.577-4.349-5.791-5.502z" />
+                                            </svg>
+                                            <h6>T-Shirts</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <!-- Template dropdown -->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown" style="position: static;">
                         <a class="nav-link dropdown-custom" href="#" id="Template" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Template</a>
-                        <div class="dropdown-menu" aria-labelledby="Template">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
+                        <div class="dropdown-menu menu-template" aria-labelledby="Template">
+                            <div class="row p-5">
+                                <div class="col-3">
+                                    <!-- Menu inside dropdown -->
+                                    <img src="https://images.pexels.com/photos/2832465/pexels-photo-2832465.jpeg?cs=srgb&dl=adult-alluring-attractive-2832465.jpg&fm=jpg"
+                                        class="img-fluid mb-3" alt="">
+                                    <h6 style="font-weight: 700;">Homepage</h6>
+                                    <ul class="list-unstyled mb-5">
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Home v.1</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Home v.2</a>
+                                        </li>
+                                    </ul>
+                                    <h6 style="font-weight: 700;">Category</h6>
+                                    <ul class="list-unstyled mb-5">
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width with category menu</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width with big products</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Boxed</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Boxed & sidebar</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Subcategories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <!-- Menu inside dropdown -->
+                                    <img src="https://images.pexels.com/photos/2832465/pexels-photo-2832465.jpeg?cs=srgb&dl=adult-alluring-attractive-2832465.jpg&fm=jpg"
+                                        class="img-fluid mb-3" alt="">
+                                    <h6 style="font-weight: 700;">Homepage</h6>
+                                    <ul class="list-unstyled mb-5">
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Home v.1</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Home v.2</a>
+                                        </li>
+                                    </ul>
+                                    <h6 style="font-weight: 700;">Category</h6>
+                                    <ul class="list-unstyled mb-5">
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width with category menu</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width with big products</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Boxed</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Boxed & sidebar</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Subcategories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <!-- Menu inside dropdown -->
+                                    <img src="https://images.pexels.com/photos/2832465/pexels-photo-2832465.jpeg?cs=srgb&dl=adult-alluring-attractive-2832465.jpg&fm=jpg"
+                                        class="img-fluid mb-3" alt="">
+                                    <h6 style="font-weight: 700;">Homepage</h6>
+                                    <ul class="list-unstyled mb-5">
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Home v.1</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Home v.2</a>
+                                        </li>
+                                    </ul>
+                                    <h6 style="font-weight: 700;">Category</h6>
+                                    <ul class="list-unstyled mb-5">
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width with category menu</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width with big products</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Boxed</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Boxed & sidebar</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Subcategories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <!-- Menu inside dropdown -->
+                                    <img src="https://images.pexels.com/photos/2832465/pexels-photo-2832465.jpeg?cs=srgb&dl=adult-alluring-attractive-2832465.jpg&fm=jpg"
+                                        class="img-fluid mb-3" alt="">
+                                    <h6 style="font-weight: 700;">Homepage</h6>
+                                    <ul class="list-unstyled mb-5">
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Home v.1</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Home v.2</a>
+                                        </li>
+                                    </ul>
+                                    <h6 style="font-weight: 700;">Category</h6>
+                                    <ul class="list-unstyled mb-5">
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width with category menu</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Full width with big products</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Boxed</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Boxed & sidebar</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Subcategories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
 
                 <!-- Search Box -->
-                <form class="form-inline form-underlined my-3 my-lg-0">
-                    <input class="search-box-custom p-2" type="text" placeholder="Search">
-                    <a href="#">
-                        <i class="fas fa-search"></i>
-                    </a>
+                <form class="input-group form-underlined my-3 my-lg-0">
+                    <input class="search-box-custom form-control p-2" type="text" placeholder="Search" />
+                    <div class="input-group-append">
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
                 </form>
 
-                <!-- 3 Icons -->
-                <ul class="list-inline ml-5 d-flex align-items-center mb-0"
+                <!-- 3 Icons large viewport -->
+                <ul class="d-none list-inline ml-5 d-lg-flex align-items-center mb-0"
                     style="font-size: 1.5rem; font-weight: 100;">
                     <li class="list-inline-item mr-3">
                         <button type="button" class="close" id="userBtn"><i class="far fa-user"></i></button>
-                        <!--User Modal -->
-                        <div class="modal" id="userModal" role="dialog">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content container">
-                                    <button type="button" class="close close-absolute" data-dismiss="modal"
-                                        aria-label="Close">
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                    <div class="modal-body py-5">
-                                        <ul class="nav" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link nav-custom active" id="login-tab" data-toggle="tab"
-                                                    href="#login" role="tab" aria-controls="login"
-                                                    aria-selected="true">Login</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link nav-custom" id="register-tab" data-toggle="tab"
-                                                    href="#register" role="tab" aria-controls="register"
-                                                    aria-selected="false">Register</a>
-                                            </li>
-                                        </ul>
-                                        <hr style="color: yellow;">
-                                        <div class="tab-content" id="userTabContent">
-                                            <!-- Login -->
-                                            <div class="tab-pane fade show active" id="login" role="tabpanel"
-                                                aria-labelledby="login-tab">
-                                                <form action="#" method="post">
-                                                    <div class="form-group">
-                                                        <label for="email" class="form-label-custom">Email</label>
-                                                        <input type="text" class="form-control" id="email" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <label for="password"
-                                                                    class="form-label-custom">Password</label>
-                                                            </div>
-                                                            <div class="col text-right">
-                                                                <span><a href="#" id="forgotPassword">Forgot
-                                                                        password?</a></span>
-                                                            </div>
-                                                        </div>
-                                                        <input type="password" class="form-control" id="password"
-                                                            placeholder="Password" />
-
-                                                    </div>
-                                                    <div class="form-check pl-0">
-
-                                                        <label class="form-check-label container px-4"
-                                                            for="remembercheck">Remember me for 30 days
-                                                            <input class="check-box-custom" type="checkbox"
-                                                                id="remembercheck" name="remembercheck"
-                                                                value="remembercheck" />
-                                                            <span class="check-mark"></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="py-2">
-                                                        <button type="submit"
-                                                            class="btn w-100 btn-outline-dark btn-slide text-uppercase">
-                                                            <i class="fas fa-sign-in-alt mr-2"></i>
-                                                            Log in
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                                <!-- HR with centered text -->
-
-                                                <div class="hr-text" data-content="OR">
-                                                </div>
-
-
-                                                <div class="text-center py-4">
-                                                    <button class="btn btn-outline-warning btn-slide px-3 py-2"
-                                                        style="letter-spacing: 0!important;">
-                                                        <i class="fab fa-facebook-f" style="color: yellow;"></i>
-                                                    </button>
-                                                    <button class="btn btn-outline-secondary btn-slide px-3 py-2"
-                                                        style="letter-spacing: 0!important;">
-                                                        <i class="fab fa-google"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <!-- Register -->
-                                            <div class="tab-pane fade" id="register" role="tabpanel"
-                                                aria-labelledby="register-tab">
-                                                <p class="text-muted" style="font-size: 0.9rem; font-weight: 600;">The
-                                                    bedding was hardly able to cover it and seemed
-                                                    ready to slide off any moment. His many legs, pit.</p>
-                                                <form action="#" method="post">
-                                                    <div class="form-group">
-                                                        <label for="name" class="form-label-custom">Name</label>
-                                                        <input type="text" class="form-control" id="name" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="email" class="form-label-custom">Email</label>
-                                                        <input type="text" class="form-control" id="email" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="password" class="form-label-custom">Password</label>
-                                                        <input type="password" class="form-control" id="password" />
-                                                    </div>
-                                                    <div class="py-2">
-                                                        <button type="submit"
-                                                            class="btn w-100 btn-outline-dark btn-slide text-uppercase">
-                                                            <i class="far fa-user"></i>
-                                                            Register
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                                <!-- HR with centered text -->
-
-                                                <div class="hr-text" data-content="OR CONNECT WITH">
-                                                </div>
-
-
-                                                <div class="text-center py-4">
-                                                    <button class="btn btn-outline-warning btn-slide px-3 py-2"
-                                                        style="letter-spacing: 0!important;">
-                                                        <i class="fab fa-facebook-f" style="color: yellow;"></i>
-                                                    </button>
-                                                    <button class="btn btn-outline-secondary btn-slide px-3 py-2"
-                                                        style="letter-spacing: 0!important;">
-                                                        <i class="fab fa-google"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </li>
                     <li class="list-inline-item mr-3">
 
@@ -322,66 +365,9 @@
                     </li>
                     <li class="list-inline-item mr-3">
                         <button type="button" class="close" id="modalRightBtn"><i class="fas fa-bars"></i></button>
-                        <!-- Modal Right -->
-                        <div class="modal modal-right" id="modalRight" role="dialog">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content h-100 container">
-                                    <div class="modal-header">
-                                        <button type="button" class="close close-rotate" style="font-size: 2.2rem;"
-                                            data-dismiss="modal" aria-label="Close">
-                                            <i class="fas fa-times"></i>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h3 class="mb-5" style="font-size: 1.2rem; font-weight: 800;">Varkala</h3>
-                                        <ul class="nav flex-column nav-modal-custom mb-5">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" href="#">Home</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Link</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link disabled" href="#" tabindex="-1"
-                                                    aria-disabled="true">Disabled</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link dropdown-custom" id="#dropDownLink"
-                                                    data-toggle="dropdown">Dropdown link</a>
-                                                <div class="dropdown-menu dropdown-menu-custom"
-                                                    aria-labelledby="dropDownLink">
-                                                    <a href="#" class="dropdown-item">Action</a>
-                                                    <a href="#" class="dropdown-item">Another action</a>
-                                                    <a href="#" class="dropdown-item">Something else here</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <ul class="list-inline d-flex align-items-center mb-4"
-                                            style="font-size: 1rem; font-weight: 500;">
-                                            <li class="list-inline-item ">
-                                                <a href="#">
-                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <p id="fa-phone-custom" style="margin: 0">020-800-456-747</p>
-                                            </li>
-                                        </ul>
-                                        <p class="text-muted" style="font-size: 0.875rem; font-weight: 600;">Samsa was a
-                                            travelling salesman - and above it there hung a picture that he had recently
-                                            cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </li>
                 </ul>
-                <!-- End 3 Icons -->
+                <!-- End 3 Icons large viewport -->
             </div>
         </nav>
         <!-- End Bottom header -->
@@ -397,7 +383,7 @@
                         <div class="row h-100 justify-content-center align-items-center" data-swiper-parallax="-500">
                             <div class="col col-lg-5 offset-lg-5">
                                 <div class="subtitle subtitle-custom py-2">OUR ALL-TIME FAVOURITES</div>
-                                <h1 class="h1-custom mb-3">Blouses & Tops</h1>
+                                <h1 class="h1-custom mb-3 h1-mobile">Blouses & Tops</h1>
                                 <p class="text-light mb-5" style="font-weight: 500;">The bedding was hardly able to
                                     cover it and seemed ready to slide off any moment. His many legs, pit</p>
                                 <button class="btn btn-dark btn-slide test-uppercase py-2">DISCOVER MORE</button>
@@ -409,12 +395,12 @@
                 <!-- Slide 2-->
                 <div class="swiper-slide bg-cover" style="background-image: url(Image/img-slide2.jpg)">
                     <!-- Each slide has parallax title -->
-                    <div class="container-fluid px-5 h-100">
+                    <div class="container-fluid px-lg-5 h-100">
                         <div class="row h-100 justify-content-center align-items-center text-center"
                             data-swiper-parallax="-30%">
                             <div class="col col-lg-5">
                                 <div class="subtitle subtitle-custom py-2 text-uppercase">BLUE & WHITE</div>
-                                <h1 class="h1-custom mb-5">Linen and denim</h1>
+                                <h1 class="h1-custom mb-5 h1-mobile">Linen and denim</h1>
                                 <button class="btn btn-dark btn-slide text-uppercase py-2">START SHOPPING</button>
                             </div>
                         </div>
@@ -427,7 +413,7 @@
                         <div class="row h-100 justify-content-start align-items-center" data-swiper-parallax="-500">
                             <div class="col col-lg-5">
                                 <div class="subtitle subtitle-custom py-2 text-uppercase">SNEAKERS</div>
-                                <h1 class="h1-custom mb-5">For every occassion</h1>
+                                <h1 class="h1-custom mb-5 h1-mobile">For every occassion</h1>
                                 <button class="btn btn-dark btn-slide text-uppercase py-2">START SHOPPING</button>
                             </div>
                         </div>
@@ -440,34 +426,33 @@
         </div>
 
         <!-- Women or Men -->
-        <div class="bg-light" style="padding-bottom: 6rem; padding-top: 6rem;">
-            <div class="container" style="height: 95vh;">
-                <div class="row justify-content-between h-100">
-                    <div class="col-6 h-100">
+        <div class="bg-light" style="padding-bottom: 6rem; padding-top: 6rem; position: relative;">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-sm-6 mb-5 mb-sm-0">
                         <div class="img-hover">
-                            <h1 class="img-text text-white">Men</h1>
-                            <div class="bg-cover" style="background-image: url(Image/men.jpg)">
-                            </div>
+                            <span></span>
+                            <img src="./Image/men.jpg" class="img-fluid" alt="" />
                         </div>
-
+                        <h1 class="img-text text-white">Men</h1>
                     </div>
-                    <div class="col-6 h-100">
+                    <div class="col-sm-6 mb-5 mb-sm-0">
                         <div class="img-hover">
-                            <h1 class="img-text text-white">Women</h1>
-                            <div class="bg-cover" style="background-image: url(Image/women.jpg">
-                            </div>
+                            <span></span>
+                            <img src="./Image/women.jpg" class="img-fluid" alt="" />
                         </div>
-
+                        <h1 class="img-text text-white">Women</h1>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
         <!-- New Arrivals -->
         <div class="container py-5">
             <div class="row justify-content-center ">
-                <div class="col-9 text-center">
-                    <h1 class="my-5" style="font-size: 4.5rem">New Arrivals</h1>
+                <div class="col-lg-10 text-center">
+                    <h3 class="my-5 h3-mobile" style="font-size: 4.5rem">New Arrivals</h3>
                     <p class="text-param text-secondary">One morning, when Gregor Samsa woke from troubled dreams, he
                         found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and
                         if he lifted his head a little he could see his brown belly, slightly domed and divided by
@@ -1015,7 +1000,186 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+        <!--User Modal -->
+        <div class="modal" id="userModal" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content container">
+                    <button type="button" class="close close-absolute" data-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="modal-body py-5">
+                        <ul class="nav" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link nav-custom active" id="login-tab" data-toggle="tab" href="#login"
+                                    role="tab" aria-controls="login" aria-selected="true">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-custom" id="register-tab" data-toggle="tab" href="#register"
+                                    role="tab" aria-controls="register" aria-selected="false">Register</a>
+                            </li>
+                        </ul>
+                        <hr style="color: yellow;">
+                        <div class="tab-content" id="userTabContent">
+                            <!-- Login -->
+                            <div class="tab-pane fade show active" id="login" role="tabpanel"
+                                aria-labelledby="login-tab">
+                                <form action="#" method="post">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label-custom">Email</label>
+                                        <input type="text" class="form-control" id="email" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="password" class="form-label-custom">Password</label>
+                                            </div>
+                                            <div class="col text-right">
+                                                <span><a href="#" id="forgotPassword">Forgot
+                                                        password?</a></span>
+                                            </div>
+                                        </div>
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Password" />
 
+                                    </div>
+                                    <div class="form-check pl-0">
+
+                                        <label class="form-check-label container px-4" for="remembercheck">Remember me
+                                            for 30 days
+                                            <input class="check-box-custom" type="checkbox" id="remembercheck"
+                                                name="remembercheck" value="remembercheck" />
+                                            <span class="check-mark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="py-2">
+                                        <button type="submit"
+                                            class="btn w-100 btn-outline-dark btn-slide text-uppercase">
+                                            <i class="fas fa-sign-in-alt mr-2"></i>
+                                            Log in
+                                        </button>
+                                    </div>
+                                </form>
+                                <!-- HR with centered text -->
+
+                                <div class="hr-text" data-content="OR">
+                                </div>
+
+
+                                <div class="text-center py-4">
+                                    <button class="btn btn-outline-warning btn-slide px-3 py-2"
+                                        style="letter-spacing: 0!important;">
+                                        <i class="fab fa-facebook-f" style="color: yellow;"></i>
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-slide px-3 py-2"
+                                        style="letter-spacing: 0!important;">
+                                        <i class="fab fa-google"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Register -->
+                            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                <p class="text-muted" style="font-size: 0.9rem; font-weight: 600;">The
+                                    bedding was hardly able to cover it and seemed
+                                    ready to slide off any moment. His many legs, pit.</p>
+                                <form action="#" method="post">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label-custom">Name</label>
+                                        <input type="text" class="form-control" id="name" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="form-label-custom">Email</label>
+                                        <input type="text" class="form-control" id="email" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="form-label-custom">Password</label>
+                                        <input type="password" class="form-control" id="password" />
+                                    </div>
+                                    <div class="py-2">
+                                        <button type="submit"
+                                            class="btn w-100 btn-outline-dark btn-slide text-uppercase">
+                                            <i class="far fa-user"></i>
+                                            Register
+                                        </button>
+                                    </div>
+                                </form>
+                                <!-- HR with centered text -->
+
+                                <div class="hr-text" data-content="OR CONNECT WITH">
+                                </div>
+
+
+                                <div class="text-center py-4">
+                                    <button class="btn btn-outline-warning btn-slide px-3 py-2"
+                                        style="letter-spacing: 0!important;">
+                                        <i class="fab fa-facebook-f" style="color: yellow;"></i>
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-slide px-3 py-2"
+                                        style="letter-spacing: 0!important;">
+                                        <i class="fab fa-google"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Right -->
+        <div class="modal modal-right" id="modalRight" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content h-100 container">
+                    <div class="modal-header">
+                        <button type="button" class="close close-rotate" style="font-size: 2.2rem;" data-dismiss="modal"
+                            aria-label="Close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="mb-5" style="font-size: 1.2rem; font-weight: 800;">Varkala</h3>
+                        <ul class="nav flex-column nav-modal-custom mb-5">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-custom" id="#dropDownLink" data-toggle="dropdown">Dropdown
+                                    link</a>
+                                <div class="dropdown-menu dropdown-menu-custom" aria-labelledby="dropDownLink">
+                                    <a href="#" class="dropdown-item">Action</a>
+                                    <a href="#" class="dropdown-item">Another action</a>
+                                    <a href="#" class="dropdown-item">Something else here</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-inline d-flex align-items-center mb-4"
+                            style="font-size: 1rem; font-weight: 500;">
+                            <li class="list-inline-item ">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <p id="fa-phone-custom" style="margin: 0">020-800-456-747</p>
+                            </li>
+                        </ul>
+                        <p class="text-muted" style="font-size: 0.875rem; font-weight: 600;">Samsa was a
+                            travelling salesman - and above it there hung a picture that he had recently
+                            cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
     <footer>
         <!-- Top footer -->
@@ -1147,6 +1311,8 @@
     </footer>
     <script src="./asset/js/swiper-slider.js"></script>
     <script src="./asset/js/aos-product.js"></script>
+    <script src="./asset/js/countdown.js"></script>
+    <script src="./asset/js/changeCSS.js"></script>
 </body>
 
 </html>

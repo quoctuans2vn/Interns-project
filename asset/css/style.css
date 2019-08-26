@@ -157,14 +157,14 @@ header{
 }
 /* Search box custom */
 .search-box-custom{
-    background-color: transparent;
-    color: gray;
+    
+    color: gray !important;
     font-weight: 500; 
-    border: 0;
+    border: 0 !important;
     font-size: 1rem;
 }
 .search-box-custom:focus{
-    outline: none;
+    box-shadow: none !important;
 }
 /* Custom form underlined */
 .form-underlined{
@@ -182,7 +182,7 @@ header{
     position: relative;
     overflow: hidden;
 }
-.img-hover .bg-cover:before{
+.img-hover span:before{
     display: none;
     width: 100%;
     height: 100%;
@@ -192,15 +192,16 @@ header{
     left: 0;
     background-color: lightcyan;
 }
-.img-hover .bg-cover{
+.img-hover span{
     transition: all ease 0.2s;
 }
-.img-hover:hover .bg-cover{
-    transform: scale(1.05);
+.img-hover:hover img{
+    transform: scale(1.1);
 }
-.img-hover:hover .bg-cover:before{
+.img-hover:hover span:before{
     display: block;
     opacity: 0.2;
+    z-index: 1;
 }
 /* Custom logo slider */
 .logos-swiper-container .swiper-wrapper .swiper-slide{
@@ -416,4 +417,38 @@ header{
     padding: 0.3rem 0.4rem !important;
     font-size: 50% !important;
     border-radius: 50% !important;
+}
+/* Menu template */
+.menu-template{
+    width: 100%;
+    max-width: 1200px;
+    left: 50%!important;
+    transform: translateX(-50%);
+}
+.menu-template-link{
+    font-size: 0.8rem;
+    color: gray!important;
+    font-weight: 500;
+
+}
+.menu-template-link:hover{
+    text-decoration: none;
+    color: black !important;
+}
+/* Responsive */
+@media (max-width: 768px){
+    /* H1 center slide */
+    .h1-mobile{
+        font-size: 3.6rem;
+    }
+}
+@media (max-width: 992px){
+    /*  */
+    .navbar-white{
+        background-color: white;
+        transition: all linear 0.1s;
+    }
+    .h3-mobile{
+        font-size: 2.8rem !important;
+    }
 }
