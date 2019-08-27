@@ -85,7 +85,7 @@
         </div>
         <!-- End Top header -->
         <!-- Bottom header -->
-        <nav class="navbar navbar-expand-sm navbar-light py-3 px-lg-5" id="navbar-changebg" style="font-weight: 500;">
+        <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-5" id="navbar-changebg" style="font-weight: 500;">
             <a class="navbar-brand" href="#" style="font-size: 1rem;">Varkala</a>
             <!-- 3 Icons small viewport -->
             <ul class="d-lg-none list-inline ml-5 d-flex align-items-center mb-0"
@@ -108,10 +108,12 @@
                 </li>
             </ul>
             <!-- End 3 Icons small viewport -->
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+            <button class="button-toggler d-lg-none" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span>
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2"/><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
+                </span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <!-- List of dropdown -->
@@ -335,8 +337,8 @@
                 </ul>
 
                 <!-- Search Box -->
-                <form class="input-group form-underlined my-3 my-lg-0" style="width: auto;">
-                    <input class="search-box-custom form-control p-2" type="text" placeholder="Search" />
+                <form class="input-group form-underlined my-3 my-lg-0 pr-3" style="width: auto;">
+                    <input class="search-box-custom form-control pl-3" type="text" placeholder="Search" />
                     <div class="input-group-append">
                         <a href="#">
                             <i class="fas fa-search"></i>
@@ -462,9 +464,9 @@
 
         </div>
         <!-- Catalogies -->
-        <div class="container pb-3 pt-5">
+        <div class="container-fluid pb-3 px-lg-5 pt-5 px-3">
             <div class="row justify-content-between">
-                <div class="col-5">
+                <div class="col-12 col-sm-8 text-sm-left text-center pr-0">
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="#" style="color: black">All Products</a></li>
                         <li class="list-inline-item"><a href="#" class="link">Clothing</a></li>
@@ -473,15 +475,16 @@
                         <li class="list-inline-item"><a href="#" class="link">Accessories</a></li>
                     </ul>
                 </div>
-                <div class="col-2"><a href="#" id="products-word" class="text-uppercase">ALL PRODUCTS</a></div>
+                <div class="col-12 col-sm-4 text-sm-right text-center pl-0"><a href="#" id="products-word"
+                        class="text-uppercase">ALL PRODUCTS</a></div>
             </div>
         </div>
         <!-- 12 Item -->
-        <div class="container pb-5">
+        <div class="container-fluid pb-5 px-lg-5">
             <div class="row">
                 <!-- Item 1 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
@@ -489,17 +492,32 @@
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -515,25 +533,41 @@
                 </div>
 
                 <!-- Item 2 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
+
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -548,25 +582,41 @@
 
                 </div>
                 <!-- Item 3 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
+
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -581,25 +631,41 @@
 
                 </div>
                 <!-- Item 4 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
+
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -614,8 +680,8 @@
 
                 </div>
                 <!-- Item 5 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
@@ -623,17 +689,32 @@
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -648,25 +729,41 @@
 
                 </div>
                 <!-- Item 6 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
+
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -681,26 +778,41 @@
 
                 </div>
                 <!-- Item 7 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
-                                    <span class="badge badge-dark badge-product">Sold out</span>
+
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -715,25 +827,41 @@
 
                 </div>
                 <!-- Item 8 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
+                                    <span class="badge badge-dark badge-product">Sold out</span>
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -748,25 +876,41 @@
 
                 </div>
                 <!-- Item 9 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
+
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -781,25 +925,41 @@
 
                 </div>
                 <!-- Item 10 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
+
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -814,25 +974,41 @@
 
                 </div>
                 <!-- Item 11 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
+
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -847,25 +1023,41 @@
 
                 </div>
                 <!-- Item 12 -->
-                <div class="col-2">
-                    <div class="product mb-3">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="product mb-md-3">
                         <div class="product-img-container">
                             <a href="#">
                                 <div class="product-swap-img">
+
                                     <img class="img-fluid" src="Image/product1-head.jpg" alt="">
                                     <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
                                 </div>
-                                <div class="bar-hover bg-light p-3 d-flex justify-content-between w-100 ">
-                                    <a href="#" class="text-dark" style="font-size: 0.9rem;">Add to cart</a>
-                                    <a href="#"><i class="far fa-heart"></i></a>
-                                    <a href="#"><i class="fas fa-expand"></i></a>
-                                </div>
                             </a>
+                            <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
+                                <div class="d-none d-sm-block">
+                                    <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
+                                        cart</a>
+                                </div>
+                                <div class="d-block d-sm-none">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
+                                    <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="product-detail py-3">
+                        <div class="product-detail py-md-3 py-2">
                             <h6>
-                                <a href="#" class="text-dark" style="font-weight: 700">White Tee</a>
+                                <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
                             </h6>
                             <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
                             <div class="product-vote">
@@ -882,12 +1074,12 @@
             </div>
         </div>
         <!-- Deal of the week -->
-        <div class="pt-4" style="height: 80vh; width: 100%; min-height: 500px;">
+        <div class="pt-4" style="height: 80vh; width: 100%; min-height: 650px;">
             <div class="bg-cover" style="background-image: url(Image/dealoftheweek.jpg); z-index: 1000;">
-                <div class="container-fluid h-100 py-5">
-                    <div class="row h-100">
-                        <div class="col-5">
-                            <div id="dealoftheweek" class="subtitle subtitle-custom text-uppercase mb-4">Deal of the
+                <div class="container py-5 px-md-0">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-6">
+                            <div id="dealoftheweek" class="subtitle subtitle-custom text-uppercase mb-3">Deal of the
                                 week
                             </div>
                             <h3 style="font-size:2.5rem; font-weight: 800;">Oversized denim jacket</h3>
@@ -902,19 +1094,19 @@
                             </div>
                             <div class="bg-white my-4" style="box-shadow: 0 0 1rem rgba(0,0,0,0.15);">
                                 <div class="row p-4 justify-content-between" style="font-weight: 700">
-                                    <div class="col text-center">
+                                    <div class="col-6 col-sm-3 mb-4 mb-sm-0 text-center">
                                         <h5 class="font-weight-bold" id="days" style="font-size: 1.7rem;"></h5>
                                         <p class="text-muted mb-0">days</p>
                                     </div>
-                                    <div class="col text-center">
+                                    <div class="col-6 col-sm-3 mb-4 mb-sm-0 text-center">
                                         <h5 class="font-weight-bold" id="hours" style="font-size: 1.7rem;"></h5>
                                         <p class="text-muted mb-0">hours</p>
                                     </div>
-                                    <div class="col text-center">
+                                    <div class="col-6 col-sm-3 text-center">
                                         <h5 class="font-weight-bold" id="minutes" style="font-size: 1.7rem;"></h5>
                                         <p class="text-muted mb-0">minutes</p>
                                     </div>
-                                    <div class="col text-center">
+                                    <div class="col-6 col-sm-3 text-center">
                                         <h5 class="font-weight-bold" id="seconds" style="font-size: 1.7rem;"></h5>
                                         <p class="text-muted mb-0">seconds</p>
                                     </div>
@@ -952,8 +1144,7 @@
         </div>
         <!-- Logo -->
         <div class="container">
-            <div class="swiper-container logos-swiper-container py-5 mb-5"
-                style="height: 20vh; width: 100%; min-height: 200px;">
+            <div class="swiper-container logos-swiper-container py-5 mb-5">
                 <div class="swiper-wrapper">
                     <!-- Logo 0 -->
                     <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
@@ -981,19 +1172,15 @@
                     </div>
                     <!-- Logo 6 -->
                     <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                        <img src="./Image/logo/inslogo.png" class="img-fluid logo-swiper" alt="">
+                        <img src="./Image/logo/meslogo.png" class="img-fluid logo-swiper" alt="">
                     </div>
                     <!-- Logo 7 -->
                     <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                        <img src="./Image/logo/meslogo.png" class="img-fluid logo-swiper" alt="">
+                        <img src="./Image/logo/twitterlogo.png" class="img-fluid logo-swiper" alt="">
                     </div>
                     <!-- Logo 8 -->
                     <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
                         <img src="./Image/logo/inslogo.png" class="img-fluid logo-swiper" alt="">
-                    </div>
-                    <!-- Logo 9 -->
-                    <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                        <img src="./Image/logo/fblogo.png" class="img-fluid logo-swiper" alt="">
                     </div>
                 </div>
                 <!-- Add Pagination -->
@@ -1186,19 +1373,27 @@
         <div class="bg-light py-5 mb-5">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-3 col-md-3 col-sm-6 py-4">
+                    <div class="col-12 col-lg-3 col-sm-6 py-4">
+                    
+                            <span>
+                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M2 11.741c-1.221-1.009-2-2.535-2-4.241 0-3.036 2.464-5.5 5.5-5.5 1.706 0 3.232.779 4.241 2h4.259c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.156-.616 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-2c-.552 0-1-.448-1-1v-6.259zm6 6.059c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-7.207-11.8c.135.477.207.98.207 1.5 0 3.036-2.464 5.5-5.5 5.5-.52 0-1.023-.072-1.5-.207v4.207h1.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6h-2v-9h-2.207zm5.207 4v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-10.5-6c1.932 0 3.5 1.568 3.5 3.5s-1.568 3.5-3.5 3.5-3.5-1.568-3.5-3.5 1.568-3.5 3.5-3.5zm.5 3h2v1h-3v-3h1v2z"/></svg>
+                            </span>
+                            <div>
+                                    <div class="font-weight-bold mb-1">Free shipping & return</div>
+                                    <div class="font-weight-light">Free Shipping over $300</div>
+                            </div>
+              
+                        
+                    </div>
+                    <div class="col-12 col-lg-3 col-sm-6 py-4">
                         <div class="font-weight-bold mb-1">Free shipping & return</div>
                         <div class="font-weight-light">Free Shipping over $300</div>
                     </div>
-                    <div class="col-3 col-md-3 col-sm-6 py-4">
+                    <div class="col-12 col-lg-3 col-sm-6 py-4">
                         <div class="font-weight-bold mb-1">Free shipping & return</div>
                         <div class="font-weight-light">Free Shipping over $300</div>
                     </div>
-                    <div class="col-3 col-md-3 col-sm-6 py-4">
-                        <div class="font-weight-bold mb-1">Free shipping & return</div>
-                        <div class="font-weight-light">Free Shipping over $300</div>
-                    </div>
-                    <div class="col-3 col-md-3 col-sm-6 py-4">
+                    <div class="col-12 col-lg-3 col-sm-6 py-4">
                         <div class="font-weight-bold mb-1">Free shipping & return</div>
                         <div class="font-weight-light">Free Shipping over $300</div>
                     </div>
@@ -1209,7 +1404,7 @@
         <div class="py-5 mb-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-5 pr-5">
+                    <div class="col-12 col-lg-5 pr-5">
                         <ul class="list-unstyled">
                             <li class="font-weight-bold">Be in touch</li>
                             <li class="text-muted my-3">
@@ -1218,16 +1413,17 @@
                                     adipisicing elit. At itaque temporibus.</small>
                             </li>
                             <li>
-                                <form class="form-inline form-underlined my-3 my-lg-0 justify-content-between">
-                                    <input class="search-box-custom p-2" type="text" placeholder="Your Email Address">
-                                    <a href="#">
+                                <form class="input-group form-underlined my-3 my-lg-0 pr-3 justify-content-between">
+                                    <input class="search-box-custom form-control pl-0" type="text" placeholder="Your Email Address"/>
+                                    <div class="input-group-append">
                                         <i class="far fa-envelope"></i>
-                                    </a>
+                                    </div>
+                                    
                                 </form>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-7">
+                    <div class="col-lg-7 d-none d-lg-block">
                         <div class="row">
                             <ul class="list-unstyled col">
                                 <li class="font-weight-bold mb-3">Shop</li>
@@ -1294,11 +1490,11 @@
         <div class="py-4">
             <div class="container">
                 <div style="font-size: 0.85rem; font-weight: 500;" class="row text-secondary">
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4 text-center text-lg-left">
                         <p>© 2019 Your company. All rights reserved.</p>
                     </div>
-                    <div class="col-8 ">
-                        <ul class="list-inline text-right">
+                    <div class="col-12 col-lg-8 text-lg-right text-center">
+                        <ul class="list-inline">
                             <li class="list-inline-item"><a href="#" class="text-muted">Terms & Conditions</a></li>
                             <li class="list-inline-item"><a href="#" class="text-muted">Privacy & cookies</a></li>
                             <li class="list-inline-item"><a href="#" class="text-muted">Accessibility</a></li>
