@@ -14,6 +14,17 @@ header{
     font-size: 1.3rem;
 }
 /* Custom links */
+.h6-toggler{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    position: relative;
+}
+.h6-toggler:focus, .h6-toggler:hover{
+    color: black;
+    text-decoration: none;
+}
 .link-footer, .link, .dropdown-item{
     color: lightslategrey!important;
     font-weight: bold;
@@ -69,6 +80,49 @@ header{
 
 }
 /* Custom icons */
+.h6-icons{
+    font-weight: 700;
+    color: black;
+}
+.h6-icons:hover{
+    text-decoration: underline black;
+}
+.footer-toggler-icon{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+}
+.footer-toggler-icon::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    margin-top: -1px;
+    transition: all linear 0.2s;
+}
+.footer-toggler-icon::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: black;
+    margin-left: -1px;
+    transition: all linear 0.2s;
+}
+.h6-toggler[aria-expanded="true"] .footer-toggler-icon::after{
+    transform: rotate(90deg);
+}
+.h6-toggler[aria-expanded="true"] .footer-toggler-icon::before{
+    transform: rotate(180deg);
+}
 .fa-facebook-f, .fa-twitter, .fa-user, .fa-heart, .fa-shopping-bag, .fa-bars, .fa-envelope, .fa-expand{
     color: black;
 }
@@ -114,11 +168,10 @@ header{
 }
 .dropdown-menu-custom{
     position: relative!important;
-    border-radius: 0!important;
     background-color: transparent!important;
     border: 0!important;
     box-shadow: none!important;
-
+    transform: none !important;
 }
 .topbar-link{
     color: black;
@@ -396,6 +449,11 @@ header{
     font-size: 50% !important;
     border-radius: 50% !important;
 }
+/* Custom service text */
+.service-text{
+    display: inline-block;
+    font-size: 0.9rem;
+}
 /* Menu template */
 .menu-template{
     width: 100%;
@@ -412,6 +470,15 @@ header{
 .menu-template-link:hover{
     text-decoration: none;
     color: black !important;
+}
+/* Custom background image inside shop dropdown */
+.bg-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* Responsive */
 @media (max-width: 768px){
@@ -463,6 +530,38 @@ header{
         background-color: white;
         transition: all linear 0.1s;
     }
+    /* Nav-bar change view port */
+    .navbar-nav .nav-item .dropdown-menu{
+        border: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    .menu-template{
+        transform: none;
+    }
     
 }
-
+@media (min-width: 993px){
+    .expand-lg{
+        display: block !important;
+    }
+    /* Footer service */
+    footer .bg-light.py-lg-6{
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+    /* List icons */
+    .navbar-nav .icons-list{
+        min-width: 750px !important;
+    }
+    .anounce{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        font-weight: 500;
+        background-color: #9a884b;
+    }
+}
