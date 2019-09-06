@@ -5,8 +5,8 @@ function setAOS(){
         "data-aos-duration": 400,
         "data-aos-delay" : 150,
     });
-    $(".product").addClass("aos-init aos-animate");
-    $(".product").attr("data-aos","zoom-in");
+    $(".product, .post").addClass("aos-init aos-animate");
+    $(".product, .post").attr("data-aos","zoom-in");
 }
 $(document).ready(function(){
     setAOS();

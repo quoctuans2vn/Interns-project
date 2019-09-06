@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./asset/css/style.css">
     <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
@@ -24,16 +24,23 @@
     <!-- Animate on Scroll -->
     <link href="./asset/css/aos.css" rel="stylesheet">
     <script src="./asset/js/aos.js"></script>
-    <!---->
+    <!-- Leaflet map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+    <!--  -->
     <script src="./asset/js/bootstrap.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <!-- Header -->
-    <header>
+    <header class="header-absolute">
         <!-- Top header -->
-        <div class="container-fluid py-3 px-lg-5" style="font-size: 0.875rem">
+        <div class="bg-gainsboro container-fluid py-3 px-lg-5" style="font-size: 0.875rem">
             <div class="row align-items-center">
                 <!-- Icon fb, twitter -->
                 <div class="d-none col-md-4 d-md-block">
@@ -442,805 +449,193 @@
         <!-- End Bottom header -->
     </header>
 
-    <!-- Slider main container -->
-    <div class="swiper-container main-swiper-container" style="height: 95vh; width: 100%; min-height: 600px;">
-        <div class="swiper-wrapper">
-            <!-- Slide 1-->
-            <div class="swiper-slide bg-cover" style="background-image: url(Image/img-slide1.jpg)">
-                <div class="container-fluid px-5 h-100">
-                    <div class="row h-100 justify-content-center align-items-center" data-swiper-parallax="-500">
-                        <div class="col col-lg-5 offset-lg-5">
-                            <div class="subtitle subtitle-custom py-2">OUR ALL-TIME FAVOURITES</div>
-                            <h1 class="h1-custom mb-3 h1-mobile">Blouses & Tops</h1>
-                            <p class="text-light mb-5" style="font-weight: 500;">The bedding was hardly able to
-                                cover it and seemed ready to slide off any moment. His many legs, pit</p>
-                            <button class="btn btn-dark btn-slide test-uppercase py-2">DISCOVER MORE</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- Slide 2-->
-            <div class="swiper-slide bg-cover" style="background-image: url(Image/img-slide2.jpg)">
-                <!-- Each slide has parallax title -->
-                <div class="container-fluid px-lg-5 h-100">
-                    <div class="row h-100 justify-content-center align-items-center text-center"
-                        data-swiper-parallax="-30%">
-                        <div class="col col-lg-5">
-                            <div class="subtitle subtitle-custom py-2 text-uppercase">BLUE & WHITE</div>
-                            <h1 class="h1-custom mb-5 h1-mobile">Linen and denim</h1>
-                            <button class="btn btn-dark btn-slide text-uppercase py-2">START SHOPPING</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 3-->
-            <div class="swiper-slide bg-cover" style="background-image: url(Image/img-slide3.jpg)">
-                <!-- Each slide has parallax title -->
-                <div class="container-fluid px-5 h-100">
-                    <div class="row h-100 justify-content-start align-items-center" data-swiper-parallax="-500">
-                        <div class="col col-lg-5">
-                            <div class="subtitle subtitle-custom py-2 text-uppercase">SNEAKERS</div>
-                            <h1 class="h1-custom mb-5 h1-mobile">For every occassion</h1>
-                            <button class="btn btn-dark btn-slide text-uppercase py-2">START SHOPPING</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-
-    <!-- Women or Men -->
-    <div class="bg-light" style="padding-bottom: 6rem; padding-top: 6rem; position: relative;">
+    <!-- Banner Parallax -->
+    <section class="parallax" style="background-image: url(Image/img-slide2.jpg)">
         <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-sm-6 mb-5 mb-sm-0">
-                    <div class="img-hover">
-                        <span></span>
-                        <img src="./Image/men.jpg" class="img-fluid" alt="" />
-                    </div>
-                    <h1 class="img-text text-white">Men</h1>
-                </div>
-                <div class="col-sm-6 mb-5 mb-sm-0">
-                    <div class="img-hover">
-                        <span></span>
-                        <img src="./Image/women.jpg" class="img-fluid" alt="" />
-                    </div>
-                    <h1 class="img-text text-white">Women</h1>
-                </div>
+            <!-- Breadcrumbs -->
+            <ol class="breadcrumb text-dark">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+
+                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+            </ol>
+            <!-- Hero content -->
+            <div class="hero-content">
+                <h1 class="hero-heading">Blog</h1>
+                <p style="font-size: 1.25rem;">As am hastily invited settled at limited civilly fortune me. Really
+                    spring in extent an by. Judge but built party world. Of so am he remember although required.
+                    Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
             </div>
         </div>
-    </div>
-    </div>
+    </section>
+    <!-- Blog -->
+    <section class="py-6">
+        <!-- Post -->
+        <div class="container">
+            <div class="row mx-lg-n5">
+                <!-- Post -->
+                <div class="col-lg-4 col-sm-6 mb-5 px-lg-5">
+                    <div class="post">
+                        <a href="post.html" class="d-block mb-4">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1485781/pexels-photo-1485781.jpeg?cs=srgb&dl=beautiful-fashion-fashionable-1485781.jpg&fm=jpg"
+                                alt="" />
+                        </a>
+                        <h6 class="mb-2"><a href="post.html" class="subject-post">Pellentesque habitant morbi</a></h6>
 
-    <!-- New Arrivals -->
-    <div class="container py-5">
-        <div class="row justify-content-center ">
-            <div class="col-lg-10 text-center">
-                <h3 class="my-5 h3-mobile" style="font-size: 4.5rem">New Arrivals</h3>
-                <p class="text-param text-secondary">One morning, when Gregor Samsa woke from troubled dreams, he
-                    found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and
-                    if he lifted his head a little he could see his brown belly, slightly domed and divided by
-                    arches into stiff sections</p>
+                        <p class="text-sm text-secondary"><a href="#" class="text-uppercase mr-2 word-gold"
+                                style="letter-spacing: 0.15rem; font-size: 0.7rem;">Fashion and Style</a>
+                            January 16, 2019
+                        </p>
+                    </div>
+                </div>
+                <!-- Post -->
+                <div class="col-lg-4 col-sm-6 mb-5 px-lg-5">
+                    <div class="post">
+                        <a href="post.html" class="d-block mb-4">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1485781/pexels-photo-1485781.jpeg?cs=srgb&dl=beautiful-fashion-fashionable-1485781.jpg&fm=jpg"
+                                alt="" />
+                        </a>
+                        <h6 class="mb-2"><a href="post.html" class="subject-post">Pellentesque habitant morbi</a></h6>
+
+                        <p class="text-sm text-secondary"><a href="#" class="text-uppercase mr-2 word-gold"
+                                style="letter-spacing: 0.15rem; font-size: 0.7rem;">Fashion and Style</a>
+                            January 16, 2019
+                        </p>
+                    </div>
+                </div>
+                <!-- Post -->
+                <div class="col-lg-4 col-sm-6 mb-5 px-lg-5">
+                    <div class="post">
+                        <a href="post.html" class="d-block mb-4">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1485781/pexels-photo-1485781.jpeg?cs=srgb&dl=beautiful-fashion-fashionable-1485781.jpg&fm=jpg"
+                                alt="" />
+                        </a>
+                        <h6 class="mb-2"><a href="post.html" class="subject-post">Pellentesque habitant morbi</a></h6>
+
+                        <p class="text-sm text-secondary"><a href="#" class="text-uppercase mr-2 word-gold"
+                                style="letter-spacing: 0.15rem; font-size: 0.7rem;">Fashion and Style</a>
+                            January 16, 2019
+                        </p>
+                    </div>
+                </div>
+                <!-- Post -->
+                <div class="col-lg-4 col-sm-6 mb-5 px-lg-5">
+                    <div class="post">
+                        <a href="post.html" class="d-block mb-4">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1485781/pexels-photo-1485781.jpeg?cs=srgb&dl=beautiful-fashion-fashionable-1485781.jpg&fm=jpg"
+                                alt="" />
+                        </a>
+                        <h6 class="mb-2"><a href="post.html" class="subject-post">Pellentesque habitant morbi</a></h6>
+
+                        <p class="text-sm text-secondary"><a href="#" class="text-uppercase mr-2 word-gold"
+                                style="letter-spacing: 0.15rem; font-size: 0.7rem;">Fashion and Style</a>
+                            January 16, 2019
+                        </p>
+                    </div>
+                </div>
+                <!-- Post -->
+                <div class="col-lg-4 col-sm-6 mb-5 px-lg-5">
+                    <div class="post">
+                        <a href="post.html" class="d-block mb-4">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1485781/pexels-photo-1485781.jpeg?cs=srgb&dl=beautiful-fashion-fashionable-1485781.jpg&fm=jpg"
+                                alt="" />
+                        </a>
+                        <h6 class="mb-2"><a href="post.html" class="subject-post">Pellentesque habitant morbi</a></h6>
+
+                        <p class="text-sm text-secondary"><a href="#" class="text-uppercase mr-2 word-gold"
+                                style="letter-spacing: 0.15rem; font-size: 0.7rem;">Fashion and Style</a>
+                            January 16, 2019
+                        </p>
+                    </div>
+                </div>
+                <!-- Post -->
+                <div class="col-lg-4 col-sm-6 mb-5 px-lg-5">
+                    <div class="post">
+                        <a href="post.html" class="d-block mb-4">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1485781/pexels-photo-1485781.jpeg?cs=srgb&dl=beautiful-fashion-fashionable-1485781.jpg&fm=jpg"
+                                alt="" />
+                        </a>
+                        <h6 class="mb-2"><a href="post.html" class="subject-post">Pellentesque habitant morbi</a></h6>
+
+                        <p class="text-sm text-secondary"><a href="#" class="text-uppercase mr-2 word-gold"
+                                style="letter-spacing: 0.15rem; font-size: 0.7rem;">Fashion and Style</a>
+                            January 16, 2019
+                        </p>
+                    </div>
+                </div>
+                <!-- Post -->
+                <div class="col-lg-4 col-sm-6 mb-5 px-lg-5">
+                    <div class="post">
+                        <a href="post.html" class="d-block mb-4">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1485781/pexels-photo-1485781.jpeg?cs=srgb&dl=beautiful-fashion-fashionable-1485781.jpg&fm=jpg"
+                                alt="" />
+                        </a>
+                        <h6 class="mb-2"><a href="post.html" class="subject-post">Pellentesque habitant morbi</a></h6>
+
+                        <p class="text-sm text-secondary"><a href="#" class="text-uppercase mr-2 word-gold"
+                                style="letter-spacing: 0.15rem; font-size: 0.7rem;">Fashion and Style</a>
+                            January 16, 2019
+                        </p>
+                    </div>
+                </div>
+                <!-- Post -->
+                <div class="col-lg-4 col-sm-6 mb-5 px-lg-5">
+                    <div class="post">
+                        <a href="post.html" class="d-block mb-4">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1485781/pexels-photo-1485781.jpeg?cs=srgb&dl=beautiful-fashion-fashionable-1485781.jpg&fm=jpg"
+                                alt="" />
+                        </a>
+                        <h6 class="mb-2"><a href="post.html" class="subject-post">Pellentesque habitant morbi</a></h6>
+
+                        <p class="text-sm text-secondary"><a href="#" class="text-uppercase mr-2 word-gold"
+                                style="letter-spacing: 0.15rem; font-size: 0.7rem;">Fashion and Style</a>
+                            January 16, 2019
+                        </p>
+                    </div>
+                </div>
+                <!-- Post -->
+                <div class="col-lg-4 col-sm-6 mb-5 px-lg-5">
+                    <div class="post">
+                        <a href="post.html" class="d-block mb-4">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1485781/pexels-photo-1485781.jpeg?cs=srgb&dl=beautiful-fashion-fashionable-1485781.jpg&fm=jpg"
+                                alt="" />
+                        </a>
+                        <h6 class="mb-2"><a href="post.html" class="subject-post">Pellentesque habitant morbi</a></h6>
+
+                        <p class="text-sm text-secondary"><a href="#" class="text-uppercase mr-2 word-gold"
+                                style="letter-spacing: 0.15rem; font-size: 0.7rem;">Fashion and Style</a>
+                            January 16, 2019
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
+            <!-- Pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-between">
+                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-chevron-left"></i>
+                            Older posts
+                        </a>
+                    </li>
+                    <li class="page-item  disabled"><a href="#" class="page-link">Newer posts
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
 
-    </div>
-    <!-- Catalogies -->
-    <div class="container-fluid pb-3 px-lg-5 pt-5 px-3">
-        <div class="row justify-content-between">
-            <div class="col-12 col-sm-8 text-sm-left text-center pr-0">
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#" style="color: black">All Products</a></li>
-                    <li class="list-inline-item"><a href="#" class="link">Clothing</a></li>
-                    <li class="list-inline-item"><a href="#" class="link">Bags</a></li>
-                    <li class="list-inline-item"><a href="#" class="link">Shoes</a></li>
-                    <li class="list-inline-item"><a href="#" class="link">Accessories</a></li>
+                    </li>
+                    </li>
                 </ul>
-            </div>
-            <div class="col-12 col-sm-4 text-sm-right text-center pl-0"><a href="#" id="products-word"
-                    class="text-uppercase">ALL PRODUCTS</a></div>
+            </nav>
         </div>
-    </div>
-    <!-- 12 Item -->
-    <div class="container-fluid pb-5 px-lg-5">
-        <div class="row">
-            <!-- Item 1 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-                                <span class="badge badge-info badge-product">Fresh</span>
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
 
-                        </div>
-                    </div>
+    </section>
 
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Item 2 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Item 3 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Item 4 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Item 5 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-                                <span class="badge badge-warning badge-product">Sale</span>
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Item 6 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Item 7 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Item 8 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-                                <span class="badge badge-dark badge-product">Sold out</span>
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Item 9 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Item 10 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Item 11 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Item 12 -->
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="product mb-md-3">
-                    <div class="product-img-container">
-                        <a href="#">
-                            <div class="product-swap-img">
-
-                                <img class="img-fluid" src="Image/product1-head.jpg" alt="">
-                                <img class="img-fluid img-swap" src="Image/product1-tail.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="bar-hover p-md-3 py-2 d-flex justify-content-between w-100 ">
-                            <div class="d-none d-sm-block">
-                                <a href="#" class="text-dark" style="font-size: 0.9rem; font-weight: 500;">Add to
-                                    cart</a>
-                            </div>
-                            <div class="d-block d-sm-none">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M6.665 9.068l-3.665-1.66v14l3.665 2.592 14.335-2.155v-14.845l-14.335 2.068zm-1.665 1.441l1 .453v10.118l-1-.707v-9.864zm14 9.615l-11 1.653v-10.881l11-1.587v10.815zm-2-15.833l-.001 1.749c0 .246-.18.455-.423.492-.303.045-.576-.19-.576-.495v-1.746c.001-.691-.231-1.304-.653-1.726-.368-.37-.847-.565-1.384-.565-1.547 0-2.96 1.558-2.963 3.268v1.681c0 .247-.181.457-.425.494-.302.046-.575-.189-.575-.494l.001-1.683c.004-2.261 1.866-4.266 3.962-4.266 1.717 0 3.039 1.387 3.037 3.291zm-9.999 2.209v-2.235c.004-2.26 1.866-4.265 3.962-4.265.492 0 .944.125 1.35.332-.423.17-.822.4-1.188.683l-.162-.015c-1.547 0-2.961 1.558-2.963 3.268v2.232c0 .248-.182.458-.427.494-.3.045-.572-.187-.572-.494z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="mr-2" style="font-size: 1.2rem;"><i class="far fa-heart"></i></a>
-                                <a href="#" style="font-size: 1.2rem;"><i class="fas fa-expand"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product-detail py-md-3 py-2">
-                        <h6>
-                            <a href="#" class="text-dark" style="font-weight: 800">White Tee</a>
-                        </h6>
-                        <span class="text-muted" style="font-weight: 600; font-size: 0.9rem;">$40.00</span>
-                        <div class="product-vote">
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-muted"></i>
-                            <i class="fas fa-star text-muted"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Deal of the week -->
-    <div class="pt-4" style="height: 80vh; width: 100%; min-height: 650px;">
-        <div class="bg-cover" style="background-image: url(Image/dealoftheweek.jpg); z-index: 1000;">
-            <div class="container py-5 px-md-0">
-                <div class="row">
-                    <div class="col-lg-10 col-xl-6">
-                        <div id="dealoftheweek" class="subtitle subtitle-custom text-uppercase mb-3">Deal of the
-                            week
-                        </div>
-                        <h3 style="font-size:2.5rem; font-weight: 800;">Oversized denim jacket</h3>
-                        <div class="text-muted my-4" style="font-weight: 500;">
-                            <span class="mr-3" style="text-decoration: line-through;">$129.00</span>
-                            <span>$79.00</span>
-                        </div>
-                        <div>
-                            <span class="badge badge-danger p-3"
-                                style="font-size: 0.7rem; border-radius: 0; font-weight: 900;" disabled>$50
-                                off</span>
-                        </div>
-                        <div class="bg-white my-4" style="box-shadow: 0 0 1rem rgba(0,0,0,0.15);">
-                            <div class="row p-4 justify-content-between" style="font-weight: 700">
-                                <div class="col-6 col-sm-3 mb-4 mb-sm-0 text-center">
-                                    <h5 class="font-weight-bold" id="days" style="font-size: 1.7rem;"></h5>
-                                    <p class="text-muted mb-0">days</p>
-                                </div>
-                                <div class="col-6 col-sm-3 mb-4 mb-sm-0 text-center">
-                                    <h5 class="font-weight-bold" id="hours" style="font-size: 1.7rem;"></h5>
-                                    <p class="text-muted mb-0">hours</p>
-                                </div>
-                                <div class="col-6 col-sm-3 text-center">
-                                    <h5 class="font-weight-bold" id="minutes" style="font-size: 1.7rem;"></h5>
-                                    <p class="text-muted mb-0">minutes</p>
-                                </div>
-                                <div class="col-6 col-sm-3 text-center">
-                                    <h5 class="font-weight-bold" id="seconds" style="font-size: 1.7rem;"></h5>
-                                    <p class="text-muted mb-0">seconds</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="btn btn-slide btn-outline-dark text-uppercase">
-                                Shop now
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- History -->
-    <div class="container py-5">
-
-        <h5 class="my-3 text-uppercase font-weight-bold" style="color: #bcac76; letter-spacing: 0.3rem;">OUR HISTORY
-        </h5>
-        <p class="text-secondary text-param">One morning, when Gregor Samsa woke from troubled dreams, he found
-            himself transformed
-            in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he
-            could see his brown belly, slightly domed and divided by arches into stiff sections
-        </p>
-        </br>
-        <p class="text-secondary text-param">
-            He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering
-            legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.
-        </p>
-
-    </div>
-    <!-- Logo -->
-    <div class="container">
-        <div class="swiper-container logos-swiper-container py-5 mb-5">
-            <div class="swiper-wrapper">
-                <!-- Logo 0 -->
-                <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                    <img src="./Image/logo/fblogo.png" class="img-fluid logo-swiper" alt="">
-                </div>
-                <!-- Logo 1 -->
-                <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                    <img src="./Image/logo/meslogo.png" class="img-fluid logo-swiper" alt="">
-                </div>
-                <!-- Logo 2 -->
-                <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                    <img src="./Image/logo/twitterlogo.png" class="img-fluid logo-swiper" alt="">
-                </div>
-                <!-- Logo 3 -->
-                <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                    <img src="./Image/logo/inslogo.png" class="img-fluid logo-swiper" alt="">
-                </div>
-                <!-- Logo 4 -->
-                <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                    <img src="./Image/logo/meslogo.png" class="img-fluid logo-swiper" alt="">
-                </div>
-                <!-- Logo 5 -->
-                <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                    <img src="./Image/logo/fblogo.png" class="img-fluid logo-swiper" alt="">
-                </div>
-                <!-- Logo 6 -->
-                <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                    <img src="./Image/logo/meslogo.png" class="img-fluid logo-swiper" alt="">
-                </div>
-                <!-- Logo 7 -->
-                <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                    <img src="./Image/logo/twitterlogo.png" class="img-fluid logo-swiper" alt="">
-                </div>
-                <!-- Logo 8 -->
-                <div class="swiper-slide h-auto d-flex justify-content-center align-items-center">
-                    <img src="./Image/logo/inslogo.png" class="img-fluid logo-swiper" alt="">
-                </div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
     <!--User Modal -->
     <div class="modal" id="userModal" role="dialog">
         <div class="modal-dialog" role="document">
@@ -1472,7 +867,7 @@
         <div class="py-5 mb-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-5 pr-5 mb-5">
+                    <div class="col-12 col-lg-5 pr-lg-5 mb-5">
                         <ul class="list-unstyled">
                             <li class="font-weight-bold">Be in touch</li>
                             <li class="text-muted my-3">
@@ -1609,9 +1004,7 @@
         </div>
     </footer>
     <script src="./asset/js/swiper-slider.js"></script>
+    <script src="./asset/js/modal-custom.js"></script>
     <script src="./asset/js/aos-product.js"></script>
-    <script src="./asset/js/countdown.js"></script>
     <script src="./asset/js/changeCSS.js"></script>
 </body>
-
-</html>
