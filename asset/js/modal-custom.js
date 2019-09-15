@@ -10,4 +10,9 @@ $(document).ready(function(){
             {backdrop: "false"},
         );
     });
+    $("#cartModalBtn").click(function(){
+        $("#cartModal").modal(
+            {backdrop: "false"},
+        );
+    });
 })

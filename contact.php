@@ -7,40 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
     <link rel="stylesheet" href="./asset/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/f74c750d0d.js"></script>
     <!-- Swiper Slider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!-- Animate on Scroll -->
     <link href="./asset/css/aos.css" rel="stylesheet">
-    <script src="./asset/js/aos.js"></script>
     <!-- Leaflet map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-        crossorigin=""></script>
+    <!-- Bootstrap select -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <!-- NoUISlider -->
+    <link rel="stylesheet" href="./asset/css/nouislider.min.css">
     <!--  -->
-    <script src="./asset/js/bootstrap.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <!-- Header -->
     <header class="header-absolute">
         <!-- Top header -->
-        <div class="bg-gainsboro container-fluid py-3 px-lg-5" style="font-size: 0.875rem">
+        <div class="container-fluid bg-gainsboro py-3 px-lg-5" style="font-size: 0.875rem">
             <div class="row align-items-center">
                 <!-- Icon fb, twitter -->
                 <div class="d-none col-md-4 d-md-block">
@@ -92,8 +79,9 @@
         </div>
         <!-- End Top header -->
         <!-- Bottom header -->
-        <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-5" id="navbar-changebg" style="font-weight: 500;">
-            <a class="navbar-brand" href="#" style="font-size: 1rem;">Varkala</a>
+        <nav class="navbar navbar-expand-lg py-3 px-lg-5 navbar-transparent navbar-light" id="navbar-changebg"
+            style="font-weight: 500;">
+            <a class="navbar-brand" href="./index.html" style="font-size: 1rem;">Varkala</a>
             <!-- 3 Icons small viewport -->
             <ul class="d-lg-none list-inline ml-5 d-flex align-items-center mb-0"
                 style="font-size: 1.5rem; font-weight: 100;">
@@ -133,8 +121,8 @@
                         <a class="nav-link dropdown-custom" href="#" id="Home" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Home</a>
                         <div class="dropdown-menu" aria-labelledby="Home">
-                            <a class="dropdown-item" href="#">Home v.1</a>
-                            <a class="dropdown-item" href="#">Home v.2</a>
+                            <a class="dropdown-item" href="./index.html">Home v.1</a>
+                            <a class="dropdown-item" href="./index.html">Home v.2</a>
                         </div>
                     </li>
                     <!-- Shop dropdown -->
@@ -148,20 +136,20 @@
                                         <h6 class="dropdown-header text-dark" style="font-weight: 700;">
                                             Shop pages
                                         </h6>
-                                        <a href="" class="dropdown-item">Full width</a>
-                                        <a href="" class="dropdown-item">Full width with category menu</a>
-                                        <a href="" class="dropdown-item">Full width with big products</a>
-                                        <a href="" class="dropdown-item">Boxed</a>
-                                        <a href="" class="dropdown-item">Boxed & sidebar</a>
-                                        <a href="" class="dropdown-item">Subcategories</a>
+                                        <a href="./category-full.html" class="dropdown-item">Full width</a>
+                                        <a href="./category-full.html" class="dropdown-item">Full width with category menu</a>
+                                        <a href="./category-full.html" class="dropdown-item">Full width with big products</a>
+                                        <a href="./category-full.html" class="dropdown-item">Boxed</a>
+                                        <a href="./category-full.html" class="dropdown-item">Boxed & sidebar</a>
+                                        <a href="./category-full.html" class="dropdown-item">Subcategories</a>
                                     </div>
                                     <div class="col-lg-4 col-sm-6 py-lg-5">
                                         <h6 class="dropdown-header text-dark" style="font-weight: 700;">
                                             Product pages
                                         </h6>
-                                        <a href="" class="dropdown-item">Product with sticky-info</a>
-                                        <a href="" class="dropdown-item">Product with background</a>
-                                        <a href="" class="dropdown-item">Product standard</a>
+                                        <a href="./detail.html" class="dropdown-item">Product with sticky-info</a>
+                                        <a href="./detail.html" class="dropdown-item">Product with background</a>
+                                        <a href="./detail.html" class="dropdown-item">Product standard</a>
                                     </div>
                                     <div class="col-lg-4 d-none d-lg-block">
                                         <img class="bg-img"
@@ -174,82 +162,82 @@
                     </li>
                     <!-- Icons Menu dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-custom" href="#" id="IconsMenu" data-toggle="dropdown"
+                        <a class="nav-link dropdown-custom" href="./category-full.html" id="IconsMenu" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Icons Menu</a>
                         <div class="dropdown-menu" aria-labelledby="IconsMenu">
                             <div class="container-fluid icons-list px-5 px-sm-4 py-lg-5 px-lg-4"
                                 style="min-width: auto; display: block;">
                                 <div class="row">
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
                                             <h6 class="h6-icons">Trousers</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">Jackets</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">T-Shirts</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">Shirts</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">Pullovers</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">Scarfs</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">Shorts</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">Underwear</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">Watches</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">Bags</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">Caps</h6>
                                         </a>
                                     </div>
                                     <div class="col-6 col-sm-3 col-md-2 text-center mb-lg-5 mb-2">
-                                        <a href="#">
+                                        <a href="./category-menu.html">
                                             <img class="mb-2" src="https://img.icons8.com/ios/50/000000/trousers.png">
-                                            <h6 class="h6-icons">Trousers</h6>
+                                            <h6 class="h6-icons">Accessories</h6>
                                         </a>
                                     </div>
                                 </div>
@@ -271,136 +259,121 @@
                                     <h6 style="font-weight: 700;">Homepage</h6>
                                     <ul class="list-unstyled mb-lg-5 mb-3">
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Home v.1</a>
+                                            <a href="./index.html" class="menu-template-link">Home v.1</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Home v.2</a>
+                                            <a href="./index.html" class="menu-template-link">Home v.2</a>
                                         </li>
                                     </ul>
                                     <h6 style="font-weight: 700;">Category</h6>
                                     <ul class="list-unstyled">
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width</a>
+                                            <a href="./category-full.html" class="menu-template-link">Full width</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width with category menu</a>
+                                            <a href="./category-full.html" class="menu-template-link">Full width with category menu</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width with big products</a>
+                                            <a href="./category-full.html" class="menu-template-link">Full width with big products</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Boxed</a>
+                                            <a href="./category-full.html" class="menu-template-link">Boxed</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Boxed & sidebar</a>
+                                            <a href="./category-full.html" class="menu-template-link">Boxed & sidebar</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Subcategories</a>
+                                            <a href="./category-full.html" class="menu-template-link">Subcategories</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
                                     <!-- Menu inside dropdown -->
-                                    <img src="https://images.pexels.com/photos/2832465/pexels-photo-2832465.jpeg?cs=srgb&dl=adult-alluring-attractive-2832465.jpg&fm=jpg"
+                                    <img src="https://images.pexels.com/photos/2872879/pexels-photo-2872879.jpeg?cs=srgb&dl=boutique-bright-business-2872879.jpg&fm=jpg"
                                         class="img-fluid mb-3 d-none d-lg-block" alt="">
-                                    <h6 style="font-weight: 700;">Homepage</h6>
+                                    <h6 style="font-weight: 700;">Order process</h6>
                                     <ul class="list-unstyled mb-lg-5 mb-3">
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Home v.1</a>
+                                            <a href="#" class="menu-template-link">Shopping cart</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Home v.2</a>
+                                            <a href="#" class="menu-template-link">Checkout</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Checkout - confirmed</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Wishlist</a>
                                         </li>
                                     </ul>
-                                    <h6 style="font-weight: 700;">Category</h6>
+                                    <h6 style="font-weight: 700;">Product</h6>
                                     <ul class="list-unstyled">
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width</a>
+                                            <a href="#" class="menu-template-link">Product with sticky info</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width with category menu</a>
+                                            <a href="#" class="menu-template-link">Product with backgound</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width with big products</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Boxed</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Boxed & sidebar</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Subcategories</a>
+                                            <a href="#" class="menu-template-link">Product standard</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
                                     <!-- Menu inside dropdown -->
-                                    <img src="https://images.pexels.com/photos/2832465/pexels-photo-2832465.jpeg?cs=srgb&dl=adult-alluring-attractive-2832465.jpg&fm=jpg"
+                                    <img src="https://images.pexels.com/photos/2897883/pexels-photo-2897883.jpeg?cs=srgb&dl=adjusting-blur-businessman-2897883.jpg&fm=jpg"
                                         class="img-fluid mb-3 d-none d-lg-block" alt="">
-                                    <h6 style="font-weight: 700;">Homepage</h6>
+                                    <h6 style="font-weight: 700;">Blog</h6>
                                     <ul class="list-unstyled mb-lg-5 mb-3">
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Home v.1</a>
+                                            <a href="./blog.html" class="menu-template-link">Blog</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Home v.2</a>
+                                            <a href="./blog.html" class="menu-template-link">Blog - Mansory</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="./post.html" class="menu-template-link">Post</a>
                                         </li>
                                     </ul>
-                                    <h6 style="font-weight: 700;">Category</h6>
+                                    <h6 style="font-weight: 700;">Pages</h6>
                                     <ul class="list-unstyled">
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width with category menu</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width with big products</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Boxed</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Boxed & sidebar</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Subcategories</a>
+                                            <a href="./contact.html" class="menu-template-link">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
                                     <!-- Menu inside dropdown -->
-                                    <img src="https://images.pexels.com/photos/2832465/pexels-photo-2832465.jpeg?cs=srgb&dl=adult-alluring-attractive-2832465.jpg&fm=jpg"
+                                    <img src="https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?cs=srgb&dl=beach-colors-fashion-2888150.jpg&fm=jpg"
                                         class="img-fluid mb-3 d-none d-lg-block" alt="">
-                                    <h6 style="font-weight: 700;">Homepage</h6>
+                                    <h6 style="font-weight: 700;">Documentation</h6>
                                     <ul class="list-unstyled mb-lg-5 mb-3">
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Home v.1</a>
+                                            <a href="#" class="menu-template-link">Introduction</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Home v.2</a>
+                                            <a href="#" class="menu-template-link">Directory structure</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Gulp</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Customizing CSS</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Credits</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a href="#" class="menu-template-link">Changelog</a>
                                         </li>
                                     </ul>
-                                    <h6 style="font-weight: 700;">Category</h6>
+                                    <h6 style="font-weight: 700;">Components</h6>
                                     <ul class="list-unstyled">
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width</a>
+                                            <a href="#" class="menu-template-link">Boostrap</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width with category menu</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Full width with big products</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Boxed</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Boxed & sidebar</a>
-                                        </li>
-                                        <li class="mb-1">
-                                            <a href="#" class="menu-template-link">Subcategories</a>
+                                            <a href="#" class="menu-template-link">Theme</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -435,7 +408,8 @@
 
                     </li>
                     <li class="list-inline-item mr-3">
-                        <button type="button" class="close" id="cartModalBtn">
+                        <button type="button" class="close" id="cartModalBtn" data-toggle="modal"
+                            data-target="#cartModal">
                             <span class="badge badge-warning badge-icon">5</span>
                             <i class="fas fa-shopping-bag"></i></button>
                     </li>
@@ -449,7 +423,8 @@
         <!-- End Bottom header -->
     </header>
     <!-- Parallax -->
-    <section class="parallax" style="background-image: url('https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?cs=srgb&dl=bloom-blooming-blossom-929778.jpg&fm=jpg');">
+    <section class="parallax"
+        style="background-image: url('./Image/bg-paralax-contact.jpg');">
         <div class="container">
             <!-- Breadcumbs -->
             <ol class="breadcrumb text-dark">
@@ -602,12 +577,12 @@
             </div>
         </div>
     </section>
-    
+
     <!--User Modal -->
     <div class="modal" id="userModal" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content container">
-                <button type="button" class="close close-absolute" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close close-absolute close-rotate" data-dismiss="modal" aria-label="Close">
                     <i class="fas fa-times"></i>
                 </button>
                 <div class="modal-body py-5">
@@ -778,6 +753,182 @@
             </div>
         </div>
     </div>
+    <!-- Cart Modal right -->
+    <div id="cartModal" tabindex="-1" role="dialog" class="modal fade modal-right">
+        <div role="document" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close close-rotate">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                            clip-rule="evenodd">
+                            <path
+                                d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body px-5 sidebar-cart-body">
+                    <!-- In case of empty cart - display this snippet + remove .d-none-->
+                    <div class="d-none text-center mb-5">
+                        <img class="mb-4" src="https://img.icons8.com/officel/50/000000/bag-front-view.png">
+                        <p>Your cart is empty </p>
+                    </div>
+                    <div class="sidebar-cart-product-wrapper custom-scrollbar">
+                        <!-- Cart item -->
+                        <div class="navbar-cart-product">
+                            <div class="d-flex align-items-center">
+                                <a href="detail.html">
+                                    <img src="./Image/img1-detail.jpg" alt=""
+                                        class="img-fluid navbar-cart-product-image" />
+                                </a>
+                                <div class="w-100">
+                                    <a href="#" class="close">
+                                        <svg viewBox="0 0 48 48" width="24" height="24"
+                                            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                            <path
+                                                d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" />
+                                            </svg>
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="detail-1.html"
+                                            class="navbar-cart-product-link text-dark link-footer">Skull Tee</a>
+                                        <small class="d-block text-muted">Quantity: 1</small>
+                                        <strong class="d-block text-sm">$75.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart item -->
+                        <div class="navbar-cart-product">
+                            <div class="d-flex align-items-center">
+                                <a href="detail.html">
+                                    <img src="./Image/img2-post.jpg" alt=""
+                                        class="img-fluid navbar-cart-product-image" />
+                                </a>
+                                <div class="w-100">
+                                    <a href="#" class="close">
+                                        <svg viewBox="0 0 48 48" width="24" height="24"
+                                            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                            <path
+                                                d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" />
+                                            </svg>
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="detail-1.html"
+                                            class="navbar-cart-product-link text-dark link-footer">Skull Tee</a>
+                                        <small class="d-block text-muted">Quantity: 1</small>
+                                        <strong class="d-block text-sm">$75.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart item -->
+                        <div class="navbar-cart-product">
+                            <div class="d-flex align-items-center">
+                                <a href="detail.html">
+                                    <img src="./Image/img1-detail.jpg" alt=""
+                                        class="img-fluid navbar-cart-product-image" />
+                                </a>
+                                <div class="w-100">
+                                    <a href="#" class="close">
+                                        <svg viewBox="0 0 48 48" width="24" height="24"
+                                            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                            <path
+                                                d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" />
+                                            </svg>
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="detail-1.html"
+                                            class="navbar-cart-product-link text-dark link-footer">Skull Tee</a>
+                                        <small class="d-block text-muted">Quantity: 1</small>
+                                        <strong class="d-block text-sm">$75.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart item -->
+                        <div class="navbar-cart-product">
+                            <div class="d-flex align-items-center">
+                                <a href="detail.html">
+                                    <img src="./Image/img2-post.jpg" alt=""
+                                        class="img-fluid navbar-cart-product-image" />
+                                </a>
+                                <div class="w-100">
+                                    <a href="#" class="close">
+                                        <svg viewBox="0 0 48 48" width="24" height="24"
+                                            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                            <path
+                                                d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" />
+                                            </svg>
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="detail-1.html"
+                                            class="navbar-cart-product-link text-dark link-footer">Skull Tee</a>
+                                        <small class="d-block text-muted">Quantity: 1</small>
+                                        <strong class="d-block text-sm">$75.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart item -->
+                        <div class="navbar-cart-product">
+                            <div class="d-flex align-items-center">
+                                <a href="detail.html">
+                                    <img src="./Image/img1-detail.jpg" alt=""
+                                        class="img-fluid navbar-cart-product-image" />
+                                </a>
+                                <div class="w-100">
+                                    <a href="#" class="close">
+                                        <svg viewBox="0 0 48 48" width="24" height="24"
+                                            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                            <path
+                                                d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" />
+                                            </svg>
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="detail-1.html"
+                                            class="navbar-cart-product-link text-dark link-footer">Skull Tee</a>
+                                        <small class="d-block text-muted">Quantity: 1</small>
+                                        <strong class="d-block text-sm">$75.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart item -->
+                        <div class="navbar-cart-product">
+                            <div class="d-flex align-items-center">
+                                <a href="detail.html">
+                                    <img src="./Image/img2-post.jpg" alt=""
+                                        class="img-fluid navbar-cart-product-image" />
+                                </a>
+                                <div class="w-100">
+                                    <a href="#" class="close">
+                                        <svg viewBox="0 0 48 48" width="24" height="24"
+                                            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                            <path
+                                                d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" />
+                                            </svg>
+                                    </a>
+                                    <div class="pl-3">
+                                        <a href="detail-1.html"
+                                            class="navbar-cart-product-link text-dark link-footer">Skull Tee</a>
+                                        <small class="d-block text-muted">Quantity: 1</small>
+                                        <strong class="d-block text-sm">$75.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer sidebar-cart-footer">
+                    <div class="w-100">
+                        <h5 class="mb-4 font-weight-bold">Subtotal: <span class="float-right">$465.32</span></h5><a
+                            href="cart.html" class="btn btn-outline-dark btn-block btn-slide text-uppercase mb-3">View
+                            cart</a><a href="#" class="btn btn-dark btn-block btn-slide text-uppercase">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
     <footer>
         <!-- Top footer -->
@@ -895,22 +1046,22 @@
                                 <div id="footerMenu1" class="expand-lg collapse">
                                     <ul class="list-unstyled">
                                         <li class="font-weight-bold mb-3 d-none d-lg-block">
-                                            <h6>Shop</h6>
+                                            <h6>Company</h6>
                                         </li>
                                         <li class="text-muted my-2">
-                                            <a href="#" class="link-footer">For Women</a>
+                                            <a href="#" class="link-footer">Login</a>
                                         </li>
                                         <li class="text-muted my-2">
-                                            <a href="#" class="link-footer">For Men</a>
+                                            <a href="#" class="link-footer">Register</a>
                                         </li>
                                         <li class="text-muted my-2">
-                                            <a href="#" class="link-footer">Stores</a>
+                                            <a href="#" class="link-footer">Wishlist</a>
                                         </li>
                                         <li class="text-muted my-2">
-                                            <a href="#" class="link-footer">Our Blog</a>
+                                            <a href="#" class="link-footer">Our Products</a>
                                         </li>
                                         <li class="text-muted my-2">
-                                            <a href="#" class="link-footer">Shop</a>
+                                            <a href="#" class="link-footer">Checkouts</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -925,22 +1076,22 @@
                                 <div id="footerMenu2" class="expand-lg collapse">
                                     <ul class="list-unstyled">
                                         <li class="font-weight-bold mb-3 d-none d-lg-block">
-                                            <h6>Shop</h6>
+                                            <h6>Your account</h6>
                                         </li>
                                         <li class="text-muted my-2">
-                                            <a href="#" class="link-footer">For Women</a>
+                                            <a href="#" class="link-footer">Login</a>
                                         </li>
                                         <li class="text-muted my-2">
-                                            <a href="#" class="link-footer">For Men</a>
+                                            <a href="#" class="link-footer">Register</a>
                                         </li>
                                         <li class="text-muted my-2">
-                                            <a href="#" class="link-footer">Stores</a>
+                                            <a href="#" class="link-footer">Wishlist</a>
                                         </li>
                                         <li class="text-muted my-2">
-                                            <a href="#" class="link-footer">Our Blog</a>
+                                            <a href="#" class="link-footer">Our Products</a>
                                         </li>
                                         <li class="text-muted my-2">
-                                            <a href="#" class="link-footer">Shop</a>
+                                            <a href="#" class="link-footer">Checkouts</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -971,9 +1122,33 @@
             </div>
         </div>
     </footer>
+    <!-- JQuery -->
+    <script src="./asset/js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <!-- Swiper slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+    <!-- AOS -->
+    <script src="./asset/js/aos.js"></script>
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/f74c750d0d.js"></script>
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+    <!-- NoUISlider -->
+    <script src="./asset/js/nouislider.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./asset/js/bootstrap.js"></script>
     <script src="./asset/js/swiper-slider.js"></script>
-    <script src="./asset/js/aos-product.js"></script>
+    <script src="./asset/js/jquery.zoom.min.js"></script>
+    <script src="./asset/js/myzoom-image.js"></script>
     <script src="./asset/js/modal-custom.js"></script>
+    <script src="./asset/js/map.js"></script>
     <script src="./asset/js/changeCSS.js"></script>
 </body>
 
